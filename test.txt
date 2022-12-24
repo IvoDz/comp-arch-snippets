@@ -11,7 +11,7 @@ void loop() {
     val = Serial.read();
   }
   if (val == '1') {
-    digitalWrite(motorPin, HIGH);
+    digitalWrite(pin, HIGH);
   }
   else if (val == '0') {
     digitalWrite(pin, LOW);
