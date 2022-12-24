@@ -1,0 +1,19 @@
+int pin = 2;
+int val;
+
+void setup() {
+  pinMode(pin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    val = Serial.read();
+  }
+  if (val == '1') {
+    digitalWrite(motorPin, HIGH);
+  }
+  else if (val == '0') {
+    digitalWrite(pin, LOW);
+  }
+}
